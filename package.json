@@ -1,0 +1,29 @@
+{
+  "name": "helix",
+  "version": "0.1.0",
+  "description": "Non-Linear Cognition Interface — voice AI designed for how non-linear minds actually think",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.0",
+    "typescript": "^5.3.0"
+  },
+  "keywords": [
+    "dyslexia",
+    "accessibility",
+    "voice-ai",
+    "non-linear-thinking",
+    "cognitive-interface",
+    "openhome"
+  ],
+  "license": "MIT",
+  "private": false
+}
