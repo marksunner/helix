@@ -152,4 +152,5 @@ MIT
 
 ---
 
-*Helix: the shape of how things actually grow.* 🧬
+*Incipit vita nova — here begins a new life.*
+*For the builder, and for the 780 million people still waiting for their ZX81 moment.* 🧬
