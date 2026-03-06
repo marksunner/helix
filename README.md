@@ -20,6 +20,8 @@ I don't just *see* connections — I *hear* them. Something closer to synaesthes
 
 Helix catches it.
 
+I was twelve when I bought my first computer — a Sinclair ZX81, paid for with a year's wages from tidying carpet samples after school. Before that, every signal I received told me I was slow. The ZX81 didn't care how long it took me to understand something. It just waited. That was the first time technology met me where I was instead of where it expected me to be. Helix is the same idea, forty years later.
+
 ---
 
 ## What Helix Does
