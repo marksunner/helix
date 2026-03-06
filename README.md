@@ -116,11 +116,13 @@ interface HelixSession {
 
 ---
 
-## Status
+## Status & Roadmap
 
 🔬 **Proof of concept** — session manager and system prompt under active development.
 
 Built with [OpenClaw](https://github.com/openclaw/openclaw) agent framework. Targeting OpenHome smart speaker platform.
+
+📋 **[See the full roadmap →](ROADMAP.md)** — 5 phases from foundation to community, with clear milestones and progress tracking. We build in public.
 
 ---
 
