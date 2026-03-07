@@ -8,9 +8,9 @@ Helix is a voice-first conversational layer designed for minds that don't think 
 
 ## Why This Exists
 
-I'm dyslexic. Not the kind where letters dance around — the kind where my thoughts arrive in five threads simultaneously, connections form across ideas that seem unrelated, and the signal is real but the packaging is non-standard.
+I'm dyslexic. Not the kind where letters dance around - the kind where my thoughts arrive in five threads simultaneously, connections form across ideas that seem unrelated, and the signal is real but the packaging is non-standard.
 
-Every voice assistant on the market — Alexa, Google, Siri, even the new LLM-backed ones — assumes thought arrives linearly. One idea at a time. Neatly packaged. Resolved before the next one starts.
+Every voice assistant on the market - Alexa, Google, Siri, even the new LLM-backed ones — assumes thought arrives linearly. One idea at a time. Neatly packaged. Resolved before the next one starts.
 
 That's not how my brain works. And it's not how 780 million other dyslexic brains work either.
 
