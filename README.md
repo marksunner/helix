@@ -67,7 +67,7 @@ Helix is framed as a dyslexia tool — and it is one. But the underlying archite
 
 All creative thinking is non-linear. All brainstorming spirals. All early-stage problem solving resists neat packaging. The dyslexic experience just makes this visible in a way that neurotypical cognition conceals.
 
-An AI that holds non-linear thought without collapsing it prematurely is a better model for how creative minds work — all of them.
+An AI that holds non-linear thought without collapsing it prematurely is a better model for how creative minds work - *ALL* of them.
 
 ---
 
