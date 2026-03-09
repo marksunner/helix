@@ -28,7 +28,7 @@ A living document tracking where Helix is, where it's going, and what's next.
 
 *In progress — March 2026*
 
-- [ ] Unit tests for thread tracking, synthesis timing, and mode switching
+- [x] Unit tests for thread tracking, synthesis timing, and mode switching *(48 tests, all passing — branch `phase2/unit-tests`)*
 - [ ] Integration with existing voice pipeline (Whisper STT + ElevenLabs TTS)
 - [ ] First real Helix conversation — demonstrate thread holding and pattern amplification with a live user
 - [ ] Demo recording showing the listening posture in action
