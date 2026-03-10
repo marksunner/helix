@@ -124,8 +124,6 @@ interface HelixSession {
 
 Built with [OpenClaw](https://github.com/openclaw/openclaw) agent framework. Targeting OpenHome smart speaker platform.
 
-🎬 **[Watch the presentation →](https://www.youtube.com/watch?v=x0nuPWbAXSI)** — the creator narrates the vision, in his own voice.
-
 📋 **[See the full roadmap →](ROADMAP.md)** — 5 phases from foundation to community, with clear milestones and progress tracking. We build in public.
 
 ---
