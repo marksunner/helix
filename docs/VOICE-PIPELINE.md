@@ -265,7 +265,7 @@ helix/
 
 ## Next Steps
 
-1. **Scaffold the voice directory** — create `src/voice/stt.ts` and `src/voice/tts.ts` with the integration code
+1. ~~**Scaffold the voice directory**~~ ✅ Done 2026-03-13 — `src/voice/stt.ts`, `tts.ts`, `pipeline.ts`, `index.ts`
 2. **Build minimal server** — Express + 3 routes, no frontend yet
 3. **Test end-to-end** — record audio → transcribe → process → speak (CLI-only first)
 4. **Add web UI** — simple HTML page for the demo
