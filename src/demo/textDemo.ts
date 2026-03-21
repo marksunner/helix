@@ -42,8 +42,8 @@ function createMockLLM(sessionManager: HelixSessionManager) {
         resolved: [],
         merges: [],
       },
-      synthesis: { detected: false },
-      pattern: { detected: false },
+      synthesis: null,
+      pattern: null,
     };
 
     // Strategy: first few turns create threads, later turns reference them
@@ -69,6 +69,7 @@ function createMockLLM(sessionManager: HelixSessionManager) {
         detected: true,
         description: `Connection between "${existingThreads[0].initialFragment}" and "${existingThreads[1].initialFragment}"`,
         threadIds: [existingThreads[0].id, existingThreads[1].id],
+        triggerFragment: existingThreads[1].initialFragment,
         surfaceText: `I notice something — the thread about "${existingThreads[0].tags[0]}" and the one about "${existingThreads[1].tags[0]}" seem connected. Would you like to explore that?`,
       };
     }

@@ -7,6 +7,8 @@
  */
 
 export { HelixSessionManager } from './sessionManager';
+export { generateArtefact } from './artefacts';
+export type { ArtefactOptions, ArtefactJSON } from './artefacts';
 export {
   HelixSession,
   HelixThread,
