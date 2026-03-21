@@ -33,7 +33,7 @@ A living document tracking where Helix is, where it's going, and what's next.
 - [x] Express server routes — HTTP API for voice and text turns *(POST /api/turn, /api/text-turn, GET /api/session)*
 - [x] First real Helix conversation — text demo with thread holding, mode switching, pattern detection, and synthesis *(src/demo/textDemo.ts)*
 - [ ] Demo recording showing the listening posture in action
-- [ ] Artefact generation — session summary output after a conversation
+- [x] Artefact generation — session summary output after a conversation *(src/artefacts.ts — markdown + JSON, thread timeline, open questions)*
 - [ ] Refined system prompt from real usage data
 - [ ] `cognitiveNotes` personalisation — calibrate for individual users
 - [ ] Tagged release: `v0.1.0`
