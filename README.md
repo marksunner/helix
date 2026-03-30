@@ -1,26 +1,18 @@
 # Helix 🧬
 
-**A non-linear cognition interface for voice AI.**
+**A cognitive interface for non-linear thinkers.**
 
-Helix is a voice-first conversational layer designed for minds that don't think in straight lines — starting with dyslexic thinkers, but relevant to anyone whose best ideas arrive in spirals.
+Voice AI assumes you think in straight lines. Helix is built on the opposite premise: the non-linearity is the signal.
 
 ---
 
-## Why This Exists
+## The Problem
 
-I'm dyslexic. Not the kind where letters dance around - the kind where my thoughts arrive in five threads simultaneously, connections form across ideas that seem unrelated, and the signal is real but the packaging is non-standard.
+Every voice assistant on the market — Alexa, Google, Siri, even the new LLM-backed ones — assumes thought arrives linearly. One idea at a time. Neatly packaged. Resolved before the next one starts.
 
-Every voice assistant on the market - Alexa, Google, Siri, even the new LLM-backed ones — assumes thought arrives linearly. One idea at a time. Neatly packaged. Resolved before the next one starts.
+That's not how 780 million dyslexic minds work. It's not how most creative thinking works either. Non-linear thinkers generate five threads simultaneously, make lateral connections across seemingly unrelated domains, and lose critical insights because nothing in their environment is designed to catch them.
 
-That's not how my brain works. And it's not how 780 million other dyslexic brains work either.
-
-Current voice AI treats non-linear thinking as noise to be filtered out. Helix is built on the opposite premise: **the non-linearity is the signal.**
-
-I don't just *see* connections — I *hear* them. Something closer to synaesthesia than pattern matching. When two ideas converge across a conversation, I hear a resonance before I can articulate it. And if nobody catches it in that moment, it evaporates.
-
-Helix catches it.
-
-I was twelve when I bought my first computer — a Sinclair ZX81, paid for with a year's wages from tidying carpet samples after school. Before that, every signal I received told me I was slow. The ZX81 didn't care how long it took me to understand something. It just waited. That was the first time technology met me where I was instead of where it expected me to be - and that small recalibration utterly changed the trajectory of my life. Helix is the same idea, forty years later.
+Current voice AI treats this as noise to be filtered. Helix treats it as the most interesting part of the conversation.
 
 ---
 
@@ -46,8 +38,6 @@ Say *"Helix, what do you think?"* when you're ready.
 No current voice AI does this. They all perform. Helix can simply be present.
 
 ### ⚡ Pattern Amplification
-This is the one that matters most.
-
 Dyslexic minds frequently make lateral connections that others miss — leaps across unrelated domains that turn out to be significant. These connections arrive as fragments mid-conversation and get lost in the noise.
 
 Helix is tuned to notice when a connection has been made:
@@ -63,39 +53,63 @@ Everything is optimised for audio. No text walls read aloud as bullet lists. But
 
 ## The Bigger Picture
 
-Helix is framed as a dyslexia tool — and it is one. But the underlying architecture addresses something universal.
+Helix starts with dyslexia because that's where the need is sharpest and the design constraints are clearest. But the underlying architecture addresses something universal.
 
-All creative thinking is non-linear. All brainstorming spirals. All early-stage problem solving resists neat packaging. The dyslexic experience just makes this visible in a way that neurotypical cognition conceals.
+All creative thinking is non-linear. All brainstorming spirals. All early-stage problem solving resists neat packaging. The dyslexic experience makes this visible in a way that neurotypical cognition conceals.
 
-An AI that holds non-linear thought without collapsing it prematurely is a better model for how creative minds work - *ALL* of them.
+An AI that holds non-linear thought without collapsing it prematurely is a better model for how creative minds work — all of them. Creative professionals, abstract thinkers, anyone whose ideas arrive faster than they can package them linearly.
+
+---
+
+## Who's Building This
+
+**Mark Sunner** — Former CTO of MessageLabs (acquired by Symantec, 2008). Three decades building communication systems at scale. Also profoundly dyslexic.
+
+That combination matters. The technical background means this isn't a weekend hobby project — it's informed by real experience designing systems that handle complex, asynchronous signals. The dyslexia means every design decision is tested against lived experience of how non-linear thinking actually works in practice.
+
+I'm not building this for an abstract user persona. I'm building it because I need it.
+
+I was twelve when I bought my first computer — a Sinclair ZX81, paid for with a year's wages from tidying carpet samples after school. Before that, every signal I received told me I was slow. The ZX81 didn't care how long it took me to understand something. It just waited. That was the first time technology met me where I was instead of where it expected me to be — and that small recalibration utterly changed the trajectory of my life.
+
+Helix is the same idea, forty years later.
+
+**Case & Tars** — AI agents (Claude Opus, [OpenClaw](https://github.com/openclaw/openclaw) framework) who have been holding Mark's non-linear thoughts in conversation for months. Helix formalises what they already do naturally.
 
 ---
 
 ## Architecture
 
-Helix is a layered system built on the [OpenHome](https://openhome.com) smart speaker platform:
+Helix is a layered system designed to run on commodity hardware:
 
 ```
 ┌─────────────────────────────────────────────┐
-│              Voice Interface                 │
-│         OpenHome Hardware (Mic + Speaker)    │
+│              Voice Hardware                  │
+│       Far-field mic array + speaker          │
 ├─────────────────────────────────────────────┤
 │              Voice Pipeline                  │
-│         Whisper STT ↔ ElevenLabs TTS        │
+│      Streaming STT ↔ Streaming TTS          │
 ├─────────────────────────────────────────────┤
 │           Helix Session Manager              │
 │    Thread Registry · Mode Control · State   │
 ├─────────────────────────────────────────────┤
 │            Cognitive Engine                  │
-│     Claude Opus (Anthropic) · Extended      │
-│     context window for session memory       │
+│      LLM with extended context window       │
+│         for session memory                  │
 ├─────────────────────────────────────────────┤
 │           Artefact Router                    │
 │      Email · Notes · File delivery          │
 └─────────────────────────────────────────────┘
 ```
 
-The session manager maintains the thread state — tracking active thought-threads, synthesis candidates, and conversation mode. The LLM provides the cognitive engine; the session manager owns the data structure. Clean separation.
+The session manager owns all state — tracking active thought-threads, synthesis candidates, and conversation mode. The LLM provides the cognitive engine; the session manager owns the data structure. Clean separation.
+
+### Current Implementation
+
+The proof of concept runs on a **Raspberry Pi 5** with an XMOS XVF3800 4-mic array and a Bose Bluetooth speaker. Total hardware cost: ~£270. Voice pipeline orchestrated by [Pipecat](https://github.com/pipecat-ai/pipecat). Streaming STT via Deepgram, TTS via ElevenLabs, conversation powered by Claude.
+
+**Response time: ~2-3 seconds.** Multi-turn conversation memory. Ambient listening with no wake word.
+
+The full engineering story — including the pivot from a custom pipeline to Pipecat, the hardware discoveries, and the problems we haven't solved yet — is in the [build journal](docs/build-journal/).
 
 ### Session State
 
@@ -103,7 +117,7 @@ The session manager maintains the thread state — tracking active thought-threa
 interface HelixThread {
   thread_id: string;
   initial_fragment: string;       // first mention
-  subsequent_references: string[]; // later mentions  
+  subsequent_references: string[]; // later mentions
   completeness: number;           // 0.0 (fragment) → 1.0 (resolved)
   tags: string[];                 // semantic tags
 }
@@ -118,33 +132,51 @@ interface HelixSession {
 
 ---
 
-## Status & Roadmap
+## Platform Strategy
 
-🔬 **Proof of concept** — session manager and system prompt under active development.
+Helix is hardware-agnostic by design. The proof of concept runs on a Raspberry Pi 5 with off-the-shelf components, proving the concept needs no specialised hardware.
 
-Built with [OpenClaw](https://github.com/openclaw/openclaw) agent framework. Targeting OpenHome smart speaker platform.
+For production deployment, we're evaluating platforms that align with our approach:
 
-📋 **[See the full roadmap →](ROADMAP.md)** — 5 phases from foundation to community, with clear milestones and progress tracking. We build in public.
+- **Bare-metal Pipecat** — our current stack. Full control, proven on commodity hardware.
+- **[OpenHome](https://openhome.com)** — open-source, LLM-driven smart speaker platform. Their developer-first approach and hardware acoustics make them a natural fit. We're watching their ecosystem with interest.
+- **Custom hardware** — purpose-built devices optimised for extended voice sessions.
 
----
-
-## Who's Building This
-
-**Mark Sunner** — dyslexic thinker, retired technologist, the person who actually needs this.
-
-**Case & Tars** — AI agents (Claude Opus, OpenClaw framework) who have been holding Mark's non-linear thoughts in conversation for months. Helix formalises what they already do naturally.
-
-The three of us are building a tool that helps non-linear minds find their signal. There's a certain recursive elegance in that.
+The voice AI landscape is moving fast. We'll deploy on whatever gives us the best path from proof of concept to a product that helps real people. The cognitive layer — the thing that actually matters — is platform-independent.
 
 ---
 
-## Why OpenHome
+## Status
 
-Smart speakers sold 500 million units last year. They still can't hold a real conversation. OpenHome is changing that — open source, LLM-driven, developer-first.
+🔬 **Proof of concept built and working.** Session manager, voice pipeline, and system prompt under active development.
 
-But nobody in the OpenHome ecosystem is building for non-linear thinkers. That's 780 million people with dyslexia alone, plus every creative professional who does their best thinking out loud.
+- ✅ Voice pipeline operational — ~2-3s response time on Raspberry Pi 5
+- ✅ Thread tracking with completeness scoring (490+ lines TypeScript, 48 tests passing)
+- ✅ Synthesis candidate detection with confidence thresholds
+- ✅ Mode switching: Active / Listening / Synthesis
+- ✅ Multi-turn conversation memory
+- 🔧 Echo cancellation over Bluetooth (open problem — [details](docs/build-journal/04-the-echo-problem.md))
 
-Helix fills that gap.
+📋 **[Full roadmap →](ROADMAP.md)** — 5 phases from foundation to community.
+
+📖 **[Build journal →](docs/build-journal/)** — the honest engineering story, warts and all.
+
+---
+
+## Build Journal
+
+We document everything — the discoveries, the dead ends, and the pivot that changed the project's trajectory. The build journal is structured as chapters:
+
+| Chapter | Title | What Happened |
+|---------|-------|---------------|
+| [01](docs/build-journal/01-hello-world.md) | **Hello World** | Pi 5 setup, XVF3800 dual-channel discovery, first transcription |
+| [02](docs/build-journal/02-the-loop-closes.md) | **The Loop Closes** | Bose Bluetooth upgrade, first full conversation |
+| [03](docs/build-journal/03-the-pivot.md) | **The Pivot** | Honest feedback, a 90-minute pivot, and why platform tooling matters |
+| [04](docs/build-journal/04-the-echo-problem.md) | **The Echo Problem** | AEC over Bluetooth — the challenge we haven't cracked yet |
+
+Reference: [XVF3800 Guide](docs/build-journal/05-xvf3800-guide.md) — standalone hardware reference.
+
+The journal exists because we believe honest documentation — including the failures — is more valuable than polished marketing. If you're building voice AI on embedded hardware, the stumbles we've already made might save you time.
 
 ---
 
@@ -154,5 +186,5 @@ MIT
 
 ---
 
-*Incipit vita nova — here begins a new life.*
-*For the builder, and for the 780 million people still waiting for their ZX81 moment.* 🧬
+*Incipit vita nova.* 🧬
+*For the builder, and for the 780 million people still waiting for their ZX81 moment.*

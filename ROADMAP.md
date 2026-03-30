@@ -28,7 +28,7 @@ A living document tracking where Helix is, where it's going, and what's next.
 
 *In progress — March 2026*
 
-- [x] Unit tests for thread tracking, synthesis timing, and mode switching *(48 tests, all passing — branch `phase2/unit-tests`)*
+- [x] Unit tests for thread tracking, synthesis timing, and mode switching *(48 tests, all passing)*
 - [x] Integration with existing voice pipeline (Whisper STT + ElevenLabs TTS) *(scaffold complete — STT, TTS, and orchestrator modules in `src/voice/`)*
 - [x] Express server routes — HTTP API for voice and text turns *(POST /api/turn, /api/text-turn, GET /api/session)*
 - [x] First real Helix conversation — text demo with thread holding, mode switching, pattern detection, and synthesis *(src/demo/textDemo.ts)*
@@ -42,19 +42,19 @@ A living document tracking where Helix is, where it's going, and what's next.
 
 ---
 
-## Phase 3 — OpenHome Integration 🏠
+## Phase 3 — Platform Deployment 🏠
 
-*Target: Q2 2026 (pending dev kit)*
+*Target: Q2 2026*
 
-- [ ] Port session manager to OpenHome Ability format
-- [ ] On-device voice pipeline configuration
+- [ ] Production voice pipeline on target hardware
 - [ ] Wake word integration ("Helix, just listen")
 - [ ] Session persistence across conversations
 - [ ] Real-time thread state display (companion app or web dashboard)
 - [ ] Optimise synthesis timing for natural conversation rhythm
 - [ ] Multi-session memory — threads that persist across days
+- [ ] Evaluate deployment platforms (bare-metal Pipecat, OpenHome, custom hardware)
 
-**Goal:** Helix running natively on OpenHome hardware as a standalone Ability, demonstrating what voice AI looks like when it's designed for non-linear minds.
+**Goal:** Helix running on production hardware as a standalone application, demonstrating what voice AI looks like when it's designed for non-linear minds.
 
 ---
 
