@@ -69,7 +69,7 @@ That combination matters. The technical background means this isn't a weekend ho
 
 I'm not building this for an abstract user persona. I'm building it because I need it.
 
-I was twelve when I bought my first computer — a Sinclair ZX81, paid for with a year's wages from tidying carpet samples after school. Before that, every signal I received told me I was slow. The ZX81 didn't care how long it took me to understand something. It just waited. That was the first time technology met me where I was instead of where it expected me to be — and that small recalibration utterly changed the trajectory of my life.
+I was twelve when I bought my first computer — a Sinclair ZX81. Before that, every signal I received told me I was slow. The ZX81 didn't care how long it took me to understand something. It just waited. That was the first time technology met me where I was instead of where it expected me to be — and that small recalibration utterly changed the trajectory of my life.
 
 Helix is the same idea, forty years later.
 
