@@ -2,6 +2,9 @@
 
 **Building a voice assistant from scratch on a Raspberry Pi 5 — what worked, what didn't, and what we learned.**
 
+![The Helix hardware stack](helix-hardware-stack.jpg)
+*The full Helix hardware stack: Raspberry Pi 5, XMOS XVF3800 4-mic array, and Bose SoundLink Mini. Total cost: ~£270.*
+
 Helix is an ambient voice assistant that listens, thinks, and speaks. No wake word, no app, no screen — just a microphone, a speaker, and a conversation.
 
 This repo is the honest build journal: the discoveries, the dead ends, the pivot that changed everything, and the problems we haven't solved yet.
